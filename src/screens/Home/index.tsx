@@ -6,12 +6,8 @@ import { Typography } from '@components';
 
 const Home = () => (
   <SafeAreaView>
-    <Typography>
-      {Config.APP_TITLE}
-    </Typography>
-    <Typography>
-      Test
-    </Typography>
+    <Typography>{Config.APP_TITLE}</Typography>
+    <Typography>This is an example</Typography>
   </SafeAreaView>
 );
 
