@@ -10,26 +10,26 @@ import routes from '@constants/routes';
 import styles from './styles';
 
 export const exampleText = 'This is an example';
-export const nextButtonLabel = 'Go to Next Screen';
+export const backButtonLabel = 'Go to Previous Screen';
 
-export const nextButtonTestId = 'nextButtonTestId';
+export const backButtonTestId = 'backButtonTestId';
 
-const Home = () => {
-  const navigation = useNavigation<HomeScreenProp>();
+const Detail = () => {
+  const navigation = useNavigation<DetailScreenProp>();
 
-  const handlePressNext = useCallback(() => {
-    navigation.navigate(routes.detail);
+  const handlePressBack = useCallback(() => {
+    navigation.navigate(routes.home);
   }, []);
 
   return (
     <SafeAreaView style={styles.container}>
       <Typography>{Config.APP_TITLE}</Typography>
       <Typography>{exampleText}</Typography>
-      <Button onPress={handlePressNext} testID={nextButtonTestId}>
-        {nextButtonLabel}
+      <Button onPress={handlePressBack} testID={backButtonTestId}>
+        {backButtonLabel}
       </Button>
     </SafeAreaView>
   );
 };
 
-export default Home;
+export default Detail;
