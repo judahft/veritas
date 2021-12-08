@@ -2,6 +2,7 @@
   "name": "veritas",
   "version": "0.0.1",
   "private": true,
+  "types": "./src/types",
   "scripts": {
     "android": "ENVFILE=.env.dev react-native run-android",
     "ios": "ENVFILE=.env.dev react-native run-ios",
@@ -9,7 +10,8 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "lint --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test:unit": "NODE_ENV=test jest"
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.6",
@@ -25,6 +27,7 @@
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/react-native": "^9.0.0",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.66.4",
     "@types/react-test-renderer": "^17.0.1",
